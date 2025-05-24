@@ -12,6 +12,16 @@ public LivroRepositorio(){
     this.baseDeDados = this.fakeDB;
 }
 
+public ArrayList<Livro> buscarPorNome(String nome) {
+    ArrayList<Livro> resultado = new ArrayList<>();
+    for (Livro livro : this.baseDeDados.getInstancia()) {
+        if (livro.getNome().toLowerCase().contains(nome.toLowerCase())) {
+            resultado.add(livro);
+        }
+    }
+    return resultado;
+}
+
 @Override
 public Livro create(Livro instancia) {
    int chave = 1;

@@ -8,3 +8,4 @@ public interface BaseServico<TDominio> {
     TDominio adicionar(TDominio instancia);
     TDominio deletar(int codigo);
 }
+
